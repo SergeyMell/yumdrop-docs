@@ -1,0 +1,35 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "charts",
+  "apis": [
+    {
+      "path": "/api/charts",
+      "operations": [
+        {
+          "summary": "Get list of charts settings",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "lat",
+              "type": "string",
+              "description": "Latitude",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "lng",
+              "type": "string",
+              "description": "Longitude",
+              "required": true
+            }
+          ],
+          "nickname": "Api::V1::Charts#index",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

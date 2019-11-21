@@ -1,0 +1,48 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "apis": [
+    {
+      "path": "/apidocs/api/v1/sessions.{format}",
+      "description": "Sessions management"
+    },
+    {
+      "path": "/apidocs/api/v1/users.{format}",
+      "description": "Users management"
+    },
+    {
+      "path": "/apidocs/api/v1/places.{format}",
+      "description": "Places (Venues)"
+    },
+    {
+      "path": "/apidocs/api/v1/reviews.{format}",
+      "description": "Reviews management"
+    },
+    {
+      "path": "/apidocs/api/v1/categories.{format}",
+      "description": "Categories"
+    },
+    {
+      "path": "/apidocs/api/v1/workers.{format}",
+      "description": "Workers"
+    },
+    {
+      "path": "/apidocs/api/v1/charts.{format}",
+      "description": "Charts lists management"
+    },
+    {
+      "path": "/apidocs/api/v1/feedbacks.{format}",
+      "description": "Feedbacks management"
+    },
+    {
+      "path": "/apidocs/api/v1/posts.{format}",
+      "description": "Posts management"
+    },
+    {
+      "path": "/apidocs/api/v1/devices.{format}",
+      "description": "Devices"
+    }
+  ],
+  "authorizations": null
+}

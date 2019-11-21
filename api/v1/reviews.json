@@ -1,0 +1,96 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "reviews",
+  "apis": [
+    {
+      "path": "/api/places/{place_id}/reviews",
+      "operations": [
+        {
+          "summary": "List of review for single place",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "place_id",
+              "type": "string",
+              "description": "Place Foursquare ID",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "if it's not set then we return 0 (zero) page",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "per_page",
+              "type": "integer",
+              "description": "if it's not set then we return not more then 10 results per page",
+              "required": false
+            }
+          ],
+          "nickname": "Api::V1::Reviews#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/places/{place_id}/reviews",
+      "operations": [
+        {
+          "summary": "Create a review",
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "AUTHTOKEN",
+              "type": "string",
+              "description": "Authentication token",
+              "required": false
+            },
+            {
+              "paramType": "path",
+              "name": "place_id",
+              "type": "string",
+              "description": "Place Foursquare ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "shot",
+              "type": "file",
+              "description": "Photo of the meal",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "like",
+              "type": "string",
+              "description": "Likes from 1 to 5",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "healthiness",
+              "type": "string",
+              "description": "Healthiness from 1 to 4",
+              "required": false
+            },
+            {
+              "paramType": "form",
+              "name": "price",
+              "type": "string",
+              "description": "Price of the meal",
+              "required": false
+            }
+          ],
+          "nickname": "Api::V1::Reviews#create",
+          "method": "post"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

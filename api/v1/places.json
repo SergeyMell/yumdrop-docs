@@ -1,0 +1,305 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "places",
+  "apis": [
+    {
+      "path": "/api/places/suggestions",
+      "operations": [
+        {
+          "summary": "Get places suggestion by query string",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Query string (minimum 3 chars)",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "lat",
+              "type": "string",
+              "description": "Latitude",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "lng",
+              "type": "string",
+              "description": "Longitude",
+              "required": true
+            }
+          ],
+          "nickname": "Api::V1::Places#suggestions",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/places/search",
+      "operations": [
+        {
+          "summary": "Search categories and places by query string",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Query string (minimum 3 chars)",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "lat",
+              "type": "string",
+              "description": "Latitude",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "lng",
+              "type": "string",
+              "description": "Longitude",
+              "required": true
+            }
+          ],
+          "nickname": "Api::V1::Places#search",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/places/instagram_places",
+      "operations": [
+        {
+          "summary": "Get places from the instagram blogs",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "lat",
+              "type": "string",
+              "description": "Latitude",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "lng",
+              "type": "string",
+              "description": "Longitude",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "radius",
+              "type": "string",
+              "description": "Radius for excluding distant places",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "limit_from_blogger",
+              "type": "string",
+              "description": "Limit_number of places from a single blogger",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "time_group_interval",
+              "type": "string",
+              "description": "Time interval for grouping places in response. In hours. 24 is default value",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "if it's not set then we return 0 (zero) page",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "per_page",
+              "type": "integer",
+              "description": "if it's not set then we return not more then 10 results per page",
+              "required": false
+            }
+          ],
+          "nickname": "Api::V1::Places#instagram_places",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/places/{id}/images",
+      "operations": [
+        {
+          "summary": "Get images for a given Place",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Place Foursquare ID",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "string",
+              "description": "Page for pagination",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "place_lat",
+              "type": "string",
+              "description": "Place latitude",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "place_lng",
+              "type": "string",
+              "description": "Place longitude",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "place_name",
+              "type": "string",
+              "description": "Place name",
+              "required": false
+            }
+          ],
+          "nickname": "Api::V1::Places#images",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/places",
+      "operations": [
+        {
+          "summary": "Search places by filters and query string",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "lat",
+              "type": "string",
+              "description": "Latitude",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "lng",
+              "type": "string",
+              "description": "Longitude",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "price",
+              "type": "string",
+              "description": "Price",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Query",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "section",
+              "type": "string",
+              "description": "Section",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "query_categories",
+              "type": "string",
+              "description": "Query Categories",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "limit",
+              "type": "string",
+              "description": "Limit",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "openNow",
+              "type": "string",
+              "description": "Boolean flag to only include venues that are open now",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "radius",
+              "type": "string",
+              "description": "Radius of search",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "chart_id",
+              "type": "string",
+              "description": "Chart ID",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "string",
+              "description": "Page number for pagination (page = 1 is the first - no offset)",
+              "required": false
+            }
+          ],
+          "nickname": "Api::V1::Places#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/places/{id}",
+      "operations": [
+        {
+          "summary": "Get place details (full place info)",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Place Foursquare ID",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "lat",
+              "type": "string",
+              "description": "(filter) is near by me?",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "lng",
+              "type": "string",
+              "description": "(filter) is near by me?",
+              "required": true
+            }
+          ],
+          "nickname": "Api::V1::Places#show",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

@@ -1,0 +1,35 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "feedbacks",
+  "apis": [
+    {
+      "path": "/api/feedbacks",
+      "operations": [
+        {
+          "summary": "Create a review",
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "AUTHTOKEN",
+              "type": "string",
+              "description": "Authentication token",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "message",
+              "type": "string",
+              "description": "Feedback message text",
+              "required": true
+            }
+          ],
+          "nickname": "Api::V1::Feedbacks#create",
+          "method": "post"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}
